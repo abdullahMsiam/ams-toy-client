@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Galary from './Galary';
 import ToysTab from './ToysTab';
 import SpecialOne from './SpecialOne';
+import SpecialTwo from './SpecialTwo';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <SpecialOne></SpecialOne>
             <Galary></Galary>
             <ToysTab  ></ToysTab>
+            <SpecialTwo></SpecialTwo>
         </div>
     );
 };
