@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ViewDetails = () => {
     const toy = useLoaderData();
+    useTitle('View Details')
     return (
         <div>
             <div className="card w-1/2 mx-auto my-8 pb-5 bg-base-100 shadow-xl">

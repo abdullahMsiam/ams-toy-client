@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
     const toys = useLoaderData();
-    console.log(toys)
+    // console.log(toys)
+    useTitle('All toys')
     // toys.map(toy => console.log(toy.toy_name))
     return (
         <div className='mt-5 mx-auto w-4/5'>

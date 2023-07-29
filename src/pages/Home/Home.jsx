@@ -4,8 +4,10 @@ import Galary from './Galary';
 import ToysTab from './ToysTab';
 import SpecialOne from './SpecialOne';
 import SpecialTwo from './SpecialTwo';
+import useTitle from '../../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div className='max-width: 1024px'>
             <Banner></Banner>
