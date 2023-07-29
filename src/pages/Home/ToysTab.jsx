@@ -9,7 +9,7 @@ const ToysTab = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://ams-toy-server.vercel.app/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
