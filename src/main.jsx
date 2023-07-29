@@ -16,6 +16,7 @@ import Register from './pages/Register/Register.jsx';
 import Login from './pages/login/Login.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
 import AllToys from './pages/allToys/AllToys.jsx';
+import ErrorPage from './pages/errorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: '/*',
+    element: <ErrorPage></ErrorPage>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
