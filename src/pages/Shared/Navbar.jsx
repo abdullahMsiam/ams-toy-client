@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
+    const { user, loading, userOut } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        userOut()
+            .then()
+            .catch(error => console.log(error))
+    }
     return (
         <div>
-            <div className="navbar bg-neutral-800 text-neutral-content">
+            <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,10 +29,10 @@ const Navbar = () => {
                                         <Link>My toys</Link>
                                     </li>
                                     <li>
-                                        <Link>All toys</Link>
+                                        <Link to="allToys">All toys</Link>
                                     </li>
                                     <li>
-                                        <Link>Add a Toys</Link>
+                                        <Link to="/addToy">Add a Toys</Link>
                                     </li>
 
                                 </ul>
@@ -36,23 +44,42 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
                         <li>
-                            <Link>My toys</Link>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
                             <Link to="/allToys">All toys</Link>
                         </li>
                         <li>
-                            <Link>Add a Toys</Link>
-                        </li>
-                        <li>
                             <Link to="/blogs">Blogs</Link>
                         </li>
+                        <>
+                            {
+                                user ? <li>
+                                    <Link to="/addToy">Add a Toys</Link>
+                                </li> : ' '
+                            }
+                            {
+                                user ? <li>
+                                    <Link>My toys</Link>
+                                </li> : ' '
+                            }
+                        </>
+
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <>
+                        {
+                            !user ? <>
+                                <Link to="/login"> <button className='btn btn-neutral'>Login</button></Link>
+                            </> :
+                                <>
+                                    <img src={user.displayName} />
+                                    <button onClick={handleLogout} className='btn btn-neutral'>Logout</button>
+                                </>
+                        }
+                    </>
                 </div>
             </div>
         </div>
