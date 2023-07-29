@@ -19,7 +19,6 @@ const AddToy = () => {
 
         const newToy = { toy_name, category, photo_url, seller_name, seller_email, price, rating, quantity, details }
 
-        console.log(newToy);
 
         fetch('http://localhost:5000/toys', {
             method: 'POST',
@@ -30,6 +29,7 @@ const AddToy = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+
 
 
     }

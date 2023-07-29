@@ -20,7 +20,7 @@ const ToysTab = () => {
     };
 
     const handleView = id => {
-        // console.log(id);
+
     }
 
     return (
