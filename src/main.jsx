@@ -11,6 +11,8 @@ import Home from './pages/Home/Home.jsx';
 import Blogs from './pages/Blogs/Blogs.jsx';
 import ViewDetails from './pages/viewDetails/ViewDetails.jsx';
 import AddToy from './pages/addToy/AddToy.jsx';
+import AuthProvider from './providers/AuthProvider.jsx';
+import Register from './pages/Register/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
       },
       {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
         path: '/addToy',
         element: <AddToy></AddToy>
       }
@@ -41,7 +47,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='container mx-auto'>
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </React.StrictMode>,
   </div>
 )
