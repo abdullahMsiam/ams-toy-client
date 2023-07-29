@@ -2,22 +2,19 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
-const Register = () => {
+const Login = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
 
-    const handleRegister = event => {
+    const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
-
-        const name = form.name.value;
         const email = form.email.value;
-        const photo = form.photo.value;
         const password = form.password.value;
 
-        console.log(name, email, photo, password)
+        console.log(email, password)
 
-        createUser(email, password)
+        signIn(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -31,16 +28,10 @@ const Register = () => {
             <div className="hero bg-base-200  ">
                 <div className="hero-content flex-col w-1/2 ">
                     <div className="card  w-full shadow-2xl bg-base-100">
-                        <h1 className="text-3xl text-center mt-5 font-bold">Please Register!</h1>
+                        <h1 className="text-3xl text-center mt-5 font-bold">Login now!</h1>
                         {/* form */}
-                        <form onSubmit={handleRegister} >
+                        <form onSubmit={handleLogin} >
                             <div className="card-body">
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Name</span>
-                                    </label>
-                                    <input type="text" placeholder="Name" name='name' className="input input-bordered" />
-                                </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
@@ -49,26 +40,24 @@ const Register = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Photo Url</span>
-                                    </label>
-                                    <input type="text" placeholder="phot url" name='photo' className="input input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
                                     <input type="text" placeholder="password" name='password' className="input input-bordered" />
                                     <label className="label">
-                                        <p>Already have an account?
-                                            <Link className='text-red-700 font-bold' to="/login"> Login</Link>
+                                        <p>Don't have an account?
+                                            <Link className='text-red-700 font-bold' to="/register"> Register</Link>
                                         </p>
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <input className="btn btn-neutral" type="submit" value="Register" />
+                                    <input className="btn btn-neutral" type="submit" value="Login" />
                                 </div>
                             </div>
                         </form>
+                        <div className='text-center mb-4 font-bold'>
+                            <h1>Or, Login with</h1>
+                            <button className="btn btn-outline mt-4 w-1/2">Google</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,4 +65,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;

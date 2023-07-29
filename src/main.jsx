@@ -13,6 +13,7 @@ import ViewDetails from './pages/viewDetails/ViewDetails.jsx';
 import AddToy from './pages/addToy/AddToy.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Register from './pages/Register/Register.jsx';
+import Login from './pages/login/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       },
       {
         path: '/addToy',
