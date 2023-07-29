@@ -9,6 +9,8 @@ import {
 import Main from './Layout/Main.jsx';
 import Home from './pages/Home/Home.jsx';
 import Blogs from './pages/Blogs/Blogs.jsx';
+import ViewDetails from './pages/viewDetails/ViewDetails.jsx';
+import AddToy from './pages/addToy/AddToy.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,15 @@ const router = createBrowserRouter([
       {
         path: '/blogs',
         element: <Blogs> </Blogs>
+      },
+      {
+        path: '/toy/:id',
+        element: <ViewDetails></ViewDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+      },
+      {
+        path: '/addToy',
+        element: <AddToy></AddToy>
       }
     ]
   },

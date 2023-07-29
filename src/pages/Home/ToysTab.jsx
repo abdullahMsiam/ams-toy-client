@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './ToysTab.css';
+import { Link } from 'react-router-dom';
 
 const ToysTab = () => {
 
@@ -19,7 +20,7 @@ const ToysTab = () => {
     };
 
     const handleView = id => {
-        console.log(id);
+        // console.log(id);
     }
 
     return (
@@ -44,7 +45,7 @@ const ToysTab = () => {
                             className={`tab-panel ${activeTab === index ? "active" : ""}`}
                         >
                             <h2 className='font-bold text-2xl text-center'>{toy.toy_name}</h2>
-                            <img className='w-full' src={toy.photo_url} alt={toy.toy_name} />
+                            <img className='w-full h-80' src={toy.photo_url} alt={toy.toy_name} />
                             <p>{toy.details}</p>
                             <div className='flex'>
                                 <div className='flex-1'>
@@ -52,7 +53,7 @@ const ToysTab = () => {
                                     <p className='font-bold'>Price: ${toy.price}</p>
                                 </div>
                                 <div>
-                                    <button onClick={() => handleView(toy._id)} className="btn btn-neutral">View Details</button>
+                                    <Link to={`/toy/${toy._id}`}><button onClick={() => handleView(toy._id)} className="btn btn-neutral">View Details</button></Link>
                                 </div>
                             </div>
                             {/* Display other toy details */}
