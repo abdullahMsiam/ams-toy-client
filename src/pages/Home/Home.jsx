@@ -6,6 +6,7 @@ import SpecialOne from './SpecialOne';
 import SpecialTwo from './SpecialTwo';
 import useTitle from '../../hooks/useTitle';
 import KeyFeatures from './KeyFeatures';
+import ShowReview from './ShowReview';
 
 const Home = () => {
     useTitle('Home')
@@ -16,7 +17,9 @@ const Home = () => {
             <SpecialOne></SpecialOne>
             <Galary></Galary>
             <ToysTab  ></ToysTab>
+            <ShowReview></ShowReview>
             <SpecialTwo></SpecialTwo>
+
         </div>
     );
 };
