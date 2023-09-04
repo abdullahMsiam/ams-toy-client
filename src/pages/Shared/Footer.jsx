@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer p-10 bg-neutral text-neutral-content">
+        <div className='bg-neutral text-neutral-content'>
+            <footer className="footer p-10 mx-auto container">
                 <div>
                     <span className="footer-title">Blogs</span>
                     <a className="link link-hover">About us</a>

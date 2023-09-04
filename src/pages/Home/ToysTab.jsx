@@ -26,7 +26,7 @@ const ToysTab = () => {
     return (
         <div className='mt-8 mb-8 mx-auto'>
             <h3 className='font-bold text-3xl text-center'>Categories toys</h3>
-            <div className='mx-auto w-1/2 mt-9 border-2 border-black p-5 rounded '>
+            <div className='mx-auto md:w-1/2 mt-9 border-2 border-black p-5 rounded '>
                 <div className="tabs">
                     {toys.map((toy, index) => (
                         <div

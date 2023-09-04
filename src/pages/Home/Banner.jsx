@@ -9,7 +9,7 @@ import img7 from '../../assets/image/banner/img7.avif'
 
 const Banner = () => {
     return (
-        <div className='mt-5'>
+        <div className='mt-5 pt-12'>
             <div className="carousel carousel-end rounded-box">
                 <div className="carousel-item">
                     <img src={img1} alt="car" />

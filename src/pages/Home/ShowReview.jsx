@@ -5,7 +5,7 @@ const ShowReview = () => {
     return (
         <div className='mx-auto mt-5'>
             <h1 className='text-center text-4xl font-bold mb-4 underline'>Whats they say about us</h1>
-            <div className="max-w-[350px] md:max-w-6xl mx-auto text-sm breadcrumbs">
+            <div className="max-w-[350px] md:max-w-7xl mx-auto text-sm breadcrumbs">
                 <ul>
                     <li>
                         <div>

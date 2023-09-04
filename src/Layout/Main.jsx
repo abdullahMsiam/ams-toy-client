@@ -5,9 +5,11 @@ import Footer from '../pages/Shared/Footer';
 
 const Main = () => {
     return (
-        <div className=''>
+        <div className='pb-0 mb-0'>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className='container mx-auto'>
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );

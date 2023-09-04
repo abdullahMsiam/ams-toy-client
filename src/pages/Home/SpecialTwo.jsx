@@ -2,9 +2,9 @@ import React from 'react';
 
 const SpecialTwo = () => {
     return (
-        <div className='text-center'>
+        <div className='text-center mt-6'>
             <h2 className='text-center font-bold text-3xl text-neutral-800'>Our Stat in one look!</h2>
-            <div className="stats stats-vertical lg:stats-horizontal shadow mt-3 mb-6">
+            <div className="stats w-11/12 stats-vertical lg:stats-horizontal shadow mt-3 mb-6">
                 <div className="stat">
                     <div className="stat-title">Total Products</div>
                     <div className="stat-value">200K</div>

@@ -10,8 +10,8 @@ const Galary = () => {
     return (
         <div className='mt-6'>
             <h2 className=' text-center text-4xl font-bold mb-3'>Toys Gallery</h2>
-            <div className=' grid lg:grid-cols-3 gap-4'>
-                <div className="mx-auto card w-96 bg-base-100 shadow-xl">
+            <div className=' w-11/12 grid lg:grid-cols-3 gap-4'>
+                <div className="mx-auto card w-11/12 bg-base-100 shadow-xl">
                     <figure><img src={img1} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -25,7 +25,7 @@ const Galary = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" mx-auto card w-96 bg-base-100 shadow-xl">
+                <div className=" mx-auto card w-11/12 bg-base-100 shadow-xl">
                     <figure><img src={img6} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -39,7 +39,7 @@ const Galary = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" mx-auto card w-96 bg-base-100 shadow-xl">
+                <div className=" mx-auto card w-11/12 bg-base-100 shadow-xl">
                     <figure><img src={img3} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -53,7 +53,7 @@ const Galary = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" mx-auto card w-96 bg-base-100 shadow-xl">
+                <div className=" mx-auto card w-11/12 bg-base-100 shadow-xl">
                     <figure><img src={img4} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -67,7 +67,7 @@ const Galary = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" mx-auto card w-96 bg-base-100 shadow-xl">
+                <div className=" mx-auto card w-11/12 bg-base-100 shadow-xl">
                     <figure><img src={img5} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -81,7 +81,7 @@ const Galary = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" mx-auto card w-96 bg-base-100 shadow-xl">
+                <div className=" mx-auto card w-11/12 bg-base-100 shadow-xl">
                     <figure><img src={img6} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
